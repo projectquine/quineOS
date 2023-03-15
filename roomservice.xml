@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <project path="device/google/sunfish" remote="github" name="LineageOS/android_device_google_sunfish" revision="lineage-20" />
-  <project path="kernel/google/msm-4.14" remote="github" name="shaunmulligan/android_kernel_google_msm-4.14" revision="lineage-20" />
+  <project path="kernel/google/msm-4.14" remote="github" name="projectquine/android_kernel_google_msm-4.14" revision="lineage-20" />
 </manifest>
