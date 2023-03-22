@@ -2,6 +2,8 @@
 
 QuineOS is a single purpose operating system based on Android and LineageOS, specifically designed for 3D printer control. QuineOS leverages the power of Klipper, Mainsail, and Moonraker to provide a seamless 3D printing experience with superior control capabilities. One of the main goals of quineOS is to repurpose old, unused Android phones that would otherwise be thrown away, giving them new life as 3D printer controllers.
 
+![QuineOS running a voron switchwire](./images/quineOS-on-voron.jpg)
+
 ## Features
 
 - **Klipper**: High-performance firmware that runs on the printer's control board, providing advanced control algorithms and communication protocols.
