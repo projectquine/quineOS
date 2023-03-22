@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="gitlab" fetch="https://gitlab.com/" />
+  <project name="shaunmulligan/quine-prebuilts.git" path="prebuilts/my-custom-apps" remote="gitlab" revision="main" />
+</manifest>

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<manifest>
-  <project name="shaunmulligan/quineos-prebuilts" path="prebuilts/my-custom-apps" remote="gitlab" revision="main" />
-</manifest>
