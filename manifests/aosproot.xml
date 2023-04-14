@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="shaunmulligan"
+            fetch="https://github.com/shaunmulligan/" />
+
+    <project path="vendor/aosproot"
+             name="aosproot"
+             remote="shaunmulligan"
+             revision="refs/heads/master" />
+</manifest>
