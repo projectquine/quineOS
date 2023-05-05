@@ -1,0 +1,11 @@
+site_name: QuineOS
+theme:
+  name: material
+  logo: assets/logo.png
+  palette:
+    primary: blue grey
+  features:
+    - navigation.instant
+    - navigation.tracking
+
+
