@@ -18,13 +18,19 @@ QuineOS is a single purpose operating system based on Android and LineageOS, spe
 
 ### Building QuineOS
 
-To build QuineOS, first clone this repository:
+To build QuineOS, first clone this repository and the cicd builder repo:
 ```bash
-git clone https://github.com/yourusername/quineOS.git
-cd quineOS
+git clone https://github.com/projectquine/quineOS.git
+git clone https://github.com/projectquine/docker-lineage-cicd.git
 ```
 
-Next, run the Docker command below to build the operating system:
+Now build the docker image for the build system using:
+```
+cd docker-lineage-cicd
+sudo docker build -t quineos-cicd .
+```
+
+Once the docker build has completed, change directory into `quineOS` folder and run the Docker command below to build the operating system for your target device. In this example it is Google Pixel 4a, codename `sunfish`:
 
 ```bash
 sudo docker run -d \
@@ -32,16 +38,16 @@ sudo docker run -d \
     -e "DEVICE_LIST=sunfish" \
     -e "SIGNATURE_SPOOFING=restricted" \
     -e "WITH_GMS=true" \
-    -e "CUSTOM_PACKAGES=Termux TermuxBoot TermuxX11 TermuxLauncher Magisk Tailscale DroidVnc" \
+    -e "CUSTOM_PACKAGES=Termux TermuxBoot TermuxX11 Magisk Tailscale DroidVnc QuineLauncher QuineCamera" \
     -v "$(pwd)/src:/srv/src" \
     -v "$(pwd)/zips:/srv/zips" \
     -v "$(pwd)/logs:/srv/logs" \
     -v "$(pwd)/cache:/srv/ccache" \
     -v "$(pwd)/manifests:/srv/local_manifests" \
-    lineageos4microg/docker-lineage-cicd
+    quineos-cicd
 ```
 
-The build process may take a while, depending on your system's resources (recommended: 16 cores with 64GB Ram). Once the build is complete, you can find the generated images in the `zips` directory.
+The build process may take a while, depending on your system's resources (recommended: 16 cores with 64GB Ram and at least 300+ GB of disk). Once the build is complete, you can find the generated images in the `zips` directory.
 
 ## Installation
 To install quineOS, first visit the [LineageOS Devices website](https://wiki.lineageos.org/devices/) and follow the flashing instructions for your specific device. Once you have prepared your device according to the instructions, flash the quineOS image generated in the previous step.
